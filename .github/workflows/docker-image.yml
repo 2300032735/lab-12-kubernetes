@@ -29,7 +29,7 @@ jobs:
           context: ./BACKEND
           file: ./BACKEND/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/lab-12-practice-backend:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/k8-practice-backend:latest
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v5
@@ -37,4 +37,4 @@ jobs:
           context: ./FRONTEND
           file: ./FRONTEND/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/lab-12-practice-frontend:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/k8-practice-frontend:latest
